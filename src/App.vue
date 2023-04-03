@@ -7,11 +7,14 @@
 </template>
 
 <script>
+import crAgent from './pages/crAgent.vue'
+
+
 import TrainingCalendar from './pages/TrainingCalendar.vue'
 import EventContent from './pages/SplitTrainingCalendar.vue'
 import Roster from './pages/BrokerRoster.vue';
 export default {
-  components: { TrainingCalendar, EventContent, Roster },
+  components: { TrainingCalendar, EventContent, Roster, crAgent },
 }
 </script>
 

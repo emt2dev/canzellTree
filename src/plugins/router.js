@@ -3,29 +3,26 @@ import VueRouter from "vue-router"
 import SplitTrainingCalendar from "../pages/SplitTrainingCalendar.vue"
 import TrainingCalendar from "../pages/TrainingCalendar.vue"
 import BrokerRoster from '../pages/BrokerRoster.vue';
+import Dashboard from '../pages/agentDashboard.vue';
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
         {
-            path: "/training-calendar",
-            name: "TrainingCalendar",
-            component: TrainingCalendar
+            path: "/dashboard/:email",
+            name: "Dashboard",
+            component: Dashboard,
+            props: true
         },
         {
-            path: "/split-training-calendar",
-            name: "SplitTrainingCalendar",
-            component: SplitTrainingCalendar
+            path: "/dashboard",
+            name: "Dashboard",
+            component: Dashboard
         },
         {
             path: "/",
-            redirect: "/training-calendar"
-        },
-        {
-            path: "/broker-roster",
-            name: "BrokerRoster",
-            component: BrokerRoster
+            redirect: "/dashboard"
         }
     ]
 })
